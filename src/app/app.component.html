@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <a class="navbar-brand " href="#">
+    <img src="https://cdn-icons-png.flaticon.com/512/1484/1484799.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Bootstrap
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" [routerLink]="['/templateForm']">Template form</a>
+      <a class="nav-item nav-link active" [routerLink]="['/dataForm']">Data Form (Reativo)</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
