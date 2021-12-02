@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DataFormComponent } from './data-form/data-form.component';
-import { TemplateFormComponent } from './template-form/template-form.component';
+import { DataFormComponent } from './pages/data-form/data-form.component';
+import { TemplateFormComponent } from './pages/template-form/template-form.component';
 
 const routes: Routes = [
   {
