@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --color-red: #CB3C23;
+  --color-red-transparent: #cb3c2386;
+  --color-red-transparent-hover: #cb3c2342;
+  --color-green: #49FF04;
+  --color-white: #EDECEC;
+  --color-gray: #edececa1;
+  --color-blue-dark: #1A1D2A;
+
+  --responsive-title-h1: max(15px, 1.6vw);
+  --responsive-span-menu: max(15px,1vw)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
