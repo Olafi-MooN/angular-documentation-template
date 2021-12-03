@@ -22,8 +22,10 @@
 }
 
 .sidebar.close {
-  transition: all ease-in-out 800ms;
-  display: none;
+
+  animation-fill-mode: both;
+  animation-name: easeOut;
+  animation-duration: 100ms;
   
 }
 
@@ -130,6 +132,7 @@
     max-width: max(400px, 26vw);
   }
   to {
+    visibility: hidden;
     min-width: 0px;
     width: max(0px, 0vw);
     max-width: max(0px, 0vw);
