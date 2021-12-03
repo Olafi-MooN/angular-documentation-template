@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { TemplateFormComponent } from './pages/template-form/template-form.component';
 import { DataFormComponent } from './pages/data-form/data-form.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
+import { AlefLiItemComponent } from './shared/components/sidebar/alef-li-item/alef-li-item.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
     TemplateFormComponent,
     DataFormComponent,
     SidebarComponent,
+    AlefLiItemComponent,
   ],
   imports: [
     BrowserModule,

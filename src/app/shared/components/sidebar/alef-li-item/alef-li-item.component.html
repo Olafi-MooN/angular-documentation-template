@@ -1,0 +1,20 @@
+<li class="selected-nav-bar">
+  <a href="#">
+    <i class="{{ iconMain }}" [ngStyle]="{'font-size': fontSize  }"></i>
+    <span class="link_name selected">{{ title }}</span>
+    <i class="bx bxs-chevron-down arrow"></i>
+  </a>
+</li>
+
+<ng-container *ngFor="let item of subItems">
+  <li>
+    <a href="#" class="sub-item">
+      <i class="{{ item.icon }}"></i>
+      <span class="link_name selected">{{ item.nome }}</span>
+      <i class="bx bxs-chevron-down arrow"></i>
+    </a>
+  </li>
+</ng-container>
+
+
+
