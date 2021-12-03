@@ -7,8 +7,8 @@
   --color-gray: #edececa1;
   --color-blue-dark: #1A1D2A;
 
-  --responsive-title-h1: max(15px, 1.6vw);
-  --responsive-span-menu: max(15px,1vw)
+  --responsive-title-h1: max(15px, 1.2vw);
+  --responsive-span-menu: max(15px,0.8vw)
 }
 
 * {

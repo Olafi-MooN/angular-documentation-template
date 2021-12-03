@@ -41,7 +41,7 @@ li a {
 }
 
 i {
-  font-size: max(16px, 1.3vw);
+  font-size: max(16px, 0.8vw);
 }
 
 li .iocn-link {

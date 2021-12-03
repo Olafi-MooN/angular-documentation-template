@@ -1,35 +1,39 @@
-<div class="sidebar close">
-  <div class="logo-details">
-    <!-- <i class="bx bxl-c-plus-plus"></i> -->
-    <img src="assets/logo-simplificada.png" alt="" />
-    <h1 class="logo-name">AlefCode - Documentation</h1>
-  </div>
-  <ul class="nav-links">
-    <!-- Sections -->
-    <app-alef-li-item
-      iconMain="bx bx-grid-alt"
-      title="Angular"
-      [subItems]="menu"
-    ></app-alef-li-item>
-  </ul>
-  <!-- Profile -->
-  <div class="profile-details">
-    <div class="profile-content">
-      <img src="https://github.com/Olafi-MooN.png" alt="profileImg" />
+<div
+  class="container-sidebar-alef"
+  [ngClass]="{ 'reverse-sidebar': model.sidebarDirection === 'right' }"
+>
+  <div class="sidebar" [ngClass]="{'close': !showMenu}">
+    <div class="logo-details">
+      <!-- <i class="bx bxl-c-plus-plus"></i> -->
+      <img src="assets/logo-simplificada.png" alt="" />
+      <h1 class="logo-name">AlefCode - Documentation</h1>
     </div>
-    <div class="name-job">
-      <div class="profile_name">By Alef Santos</div>
-      <div class="job">Front-End Developer</div>
+    <ul class="nav-links">
+      <!-- Sections -->
+      <app-alef-li-item
+        iconMain="bx bx-grid-alt"
+        title="Angular"
+        [subItems]="menu"
+      ></app-alef-li-item>
+    </ul>
+    <!-- Profile -->
+    <div class="profile-details">
+      <div class="profile-content">
+        <img src="https://github.com/Olafi-MooN.png" alt="profileImg" />
+      </div>
+      <div class="name-job">
+        <div class="profile_name">By Alef Santos</div>
+        <div class="job">Front-End Developer</div>
+      </div>
+      <!-- <i class="bx bx-log-out"></i> -->
     </div>
-    <!-- <i class="bx bx-log-out"></i> -->
   </div>
+  <section class="home-section">
+    <!-- <div class="home-content">
+  <i class='bx bx-menu' ></i>
+  <span class="text">Drop Down Sidebar</span>
+</div> -->
+    <app-alef-nav-menu-section (activeMenu)="activeMenu($event)"> </app-alef-nav-menu-section>
+    <ng-content></ng-content>
+  </section>
 </div>
-
-<section class="home-section">
-  <!-- <div class="home-content">
-    <i class='bx bx-menu' ></i>
-    <span class="text">Drop Down Sidebar</span>
-  </div> -->
-
-  <ng-content></ng-content>
-</section>

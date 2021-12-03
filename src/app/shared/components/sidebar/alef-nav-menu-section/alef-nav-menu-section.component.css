@@ -1,0 +1,19 @@
+.container-nav-header-menu {
+  width: 100%;
+  height: max(50px, 3.5vw);
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container-nav-header-menu .bx.bx-menu {
+  font-size: max(40px, 2rem);
+  cursor: pointer;
+  transition: opacity 500ms ease-in-out;
+}
+
+.container-nav-header-menu .bx.bx-menu:hover {
+  opacity: 0.5;
+}

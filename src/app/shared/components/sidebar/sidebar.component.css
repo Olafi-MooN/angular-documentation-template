@@ -1,12 +1,30 @@
+.container-sidebar-alef {
+  display: flex;
+}
+.container-sidebar-alef.reverse-sidebar {
+  flex-direction: row-reverse;
+}
+
 .sidebar {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  width: max(300px, 30vw);
-  max-width: max(400px, 35vw);
+  min-width: 300px;
+  width: max(300px, 24vw);
+  max-width: max(400px, 26vw);
   height: 100vh;
   background-color: var(--color-blue-dark);
   position: relative;
+  animation-name: easeIn;
+  transition: width ease-in-out 800ms;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+}
+
+.sidebar.close {
+  transition: all ease-in-out 800ms;
+  display: none;
+  
 }
 
 .logo-details {
@@ -17,15 +35,15 @@
   width: 100%;
 }
 
-.logo-details img { 
-  width: max(60px, 6vw);
+.logo-details img {
+  width: max(50px, 5vw);
   margin: 30px auto;
 }
 
-.logo-details .logo-name{ 
- color: var(--color-gray);
- font-size: var(--responsive-title-h1);
- margin-top: 12px;
+.logo-details .logo-name {
+  color: var(--color-gray);
+  font-size: var(--responsive-title-h1);
+  margin: 25px 0;
 }
 
 .nav-links {
@@ -43,25 +61,24 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 1px grey; 
+  box-shadow: inset 0 0 1px grey;
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--color-red); 
+  background: var(--color-red);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-red-transparent); 
+  background: var(--color-red-transparent);
 }
 
-.nav-links .selected-nav-bar { 
+.nav-links .selected-nav-bar {
   background-color: var(--color-red-transparent);
   border-radius: 8px;
-
 }
 
 .link_name {
@@ -85,4 +102,36 @@
 
 .profile-details .name-job {
   margin-left: 23px;
+}
+
+.home-section {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes easeIn {
+  from {
+    min-width: 0px;
+    width: max(0px, 0vw);
+    max-width: max(0px, 0vw);
+  }
+  to {
+    min-width: 300px;
+    width: max(300px, 24vw);
+    max-width: max(400px, 26vw);
+  }
+}
+
+@keyframes easeOut {
+  from {
+    min-width: 300px;
+    width: max(300px, 24vw);
+    max-width: max(400px, 26vw);
+  }
+  to {
+    min-width: 0px;
+    width: max(0px, 0vw);
+    max-width: max(0px, 0vw);
+  }
 }

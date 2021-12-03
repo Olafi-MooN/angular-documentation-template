@@ -9,6 +9,7 @@ import { TemplateFormComponent } from './pages/template-form/template-form.compo
 import { DataFormComponent } from './pages/data-form/data-form.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { AlefLiItemComponent } from './shared/components/sidebar/alef-li-item/alef-li-item.component';
+import { AlefNavMenuSectionComponent } from './shared/components/sidebar/alef-nav-menu-section/alef-nav-menu-section.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AlefLiItemComponent } from './shared/components/sidebar/alef-li-item/al
     DataFormComponent,
     SidebarComponent,
     AlefLiItemComponent,
+    AlefNavMenuSectionComponent,
   ],
   imports: [
     BrowserModule,
