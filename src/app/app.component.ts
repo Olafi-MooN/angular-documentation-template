@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularform';
+  code = `function myFunction() {
+  document.getElementById("demo1").innerHTML = "Test 1!";
+  document.getElementById("demo2").innerHTML = "Test 2!";
+}`
 }

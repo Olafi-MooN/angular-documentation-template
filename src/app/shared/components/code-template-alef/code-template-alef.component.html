@@ -1,0 +1,12 @@
+<div *ngIf="codeDefaultConfig.useTabs">
+  <tabset>
+    <tab *ngFor="let item of listCodeFiles" [heading]="item.nameFile" id="tab1">
+      <pre
+        *ngIf="code"
+      ><code [highlight]="item.code" [languages]="[item.typeFile]"  [lineNumbers]="codeDefaultConfig.lineNumbers"></code></pre>
+    </tab>
+  </tabset>
+</div>
+<div *ngIf="code && !codeDefaultConfig.useTabs">
+  <pre *ngFor="let item of listCodeFiles"><code [highlight]="item.code" [languages]="[item.typeFile]"  [lineNumbers]="codeDefaultConfig.lineNumbers"></code></pre>
+</div>
