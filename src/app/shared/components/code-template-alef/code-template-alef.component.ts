@@ -26,7 +26,7 @@ export class CodeTemplateAlefComponent implements OnInit {
     },
   ]
 
-  
+
   constructor() { }
 
   ngOnInit(): void {

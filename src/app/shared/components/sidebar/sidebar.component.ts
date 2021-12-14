@@ -14,6 +14,8 @@ export interface ISideBarOptionsModel {
 export class SidebarComponent implements OnInit {
 
   public menu: ISubItemNavModel[] = [
+    { nome: "Reactive - Forms", icon: "bx bxl-angular", url: ""},
+    { nome: "Reactive - Forms", icon: "bx bxl-angular", url: ""},
     { nome: "Reactive - Forms", icon: "bx bxl-angular", url: ""}
   ]
 

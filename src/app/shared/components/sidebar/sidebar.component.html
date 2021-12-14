@@ -15,6 +15,11 @@
         title="Angular"
         [subItems]="menu"
       ></app-alef-li-item>
+      <app-alef-li-item
+        iconMain="bx bx-grid-alt"
+        title="React"
+        [subItems]="menu"
+      ></app-alef-li-item>
     </ul>
     <!-- Profile -->
     <div class="profile-details">
@@ -29,10 +34,6 @@
     </div>
   </div>
   <section class="home-section">
-    <!-- <div class="home-content">
-  <i class='bx bx-menu' ></i>
-  <span class="text">Drop Down Sidebar</span>
-</div> -->
     <app-alef-nav-menu-section (activeMenu)="activeMenu($event)"> </app-alef-nav-menu-section>
     <ng-content></ng-content>
   </section>

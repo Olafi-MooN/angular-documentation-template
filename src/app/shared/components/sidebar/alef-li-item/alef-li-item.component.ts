@@ -18,9 +18,15 @@ export class AlefLiItemComponent implements OnInit {
   @Input() fontSize: String = "";
   @Input() subItems: ISubItemNavModel[] = {} as ISubItemNavModel[];
   @Input() selected: string = "";
+  @Input() showList: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public showItem() {
+    this.showList = !this.showList;
   }
 
 }
