@@ -1,9 +1,10 @@
 li {
   list-style-type: none;
-  padding: 0 20px;
+  padding: 0 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  height: max(8vh, 40px);
 }
 
 li:hover{
