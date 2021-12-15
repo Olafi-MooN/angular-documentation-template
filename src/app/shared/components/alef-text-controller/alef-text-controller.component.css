@@ -1,0 +1,40 @@
+.container-add { 
+  width: calc(100% + 60px); ;
+  margin-top: max(20px, 5vh);
+  margin-left: -30px;
+  height: 2px;
+  background-color: var(--color-red);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-text-controller {
+  position: relative;
+  width: max(120px, 8vw);
+  border: 2px solid var(--color-red);
+  border-radius: 8px;
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+.btn-text-controller::before {
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: var(--color-gray-transparent);
+  width: 0%;
+  border-radius: 6px;
+  height: 100%;
+  transition: all 400ms ease-in-out;
+}
+
+.btn-text-controller:hover::before {
+  width: 100%;
+}

@@ -1,0 +1,6 @@
+<div *ngFor="let item of listTextCode">
+  <angular-editor *ngIf="item === 'text'"></angular-editor>
+  <app-code-template-alef *ngIf="item === 'code'" [code]="code"></app-code-template-alef>
+</div>
+
+<app-alef-text-controller (addText)="addNewText($event)" (addCode)="addNewCode($event)"></app-alef-text-controller>

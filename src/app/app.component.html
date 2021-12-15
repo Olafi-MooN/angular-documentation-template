@@ -13,8 +13,10 @@
 
 
 <app-sidebar>
-  <!-- <router-outlet></router-outlet> -->
   <div class="container-alef">
-    <app-code-template-alef  [code]="code"></app-code-template-alef>
+    <router-outlet></router-outlet>
+    <!-- <app-alef-text-controller></app-alef-text-controller> -->
+    <!-- <app-code-template-alef  [code]="code"></app-code-template-alef> -->
+    <app-alef-add-documentation></app-alef-add-documentation>
   </div>
 </app-sidebar>

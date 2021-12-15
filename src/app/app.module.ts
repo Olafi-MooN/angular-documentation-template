@@ -14,6 +14,10 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 import { AlefLiItemComponent } from './shared/components/sidebar/alef-li-item/alef-li-item.component';
 import { AlefNavMenuSectionComponent } from './shared/components/sidebar/alef-nav-menu-section/alef-nav-menu-section.component';
 import { CodeTemplateAlefComponent } from './shared/components/code-template-alef/code-template-alef.component';
+import { AlefTextControllerComponent } from './shared/components/alef-text-controller/alef-text-controller.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { AlefAddDocumentationComponent } from './pages/alef-add-documentation/alef-add-documentation.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,8 @@ import { CodeTemplateAlefComponent } from './shared/components/code-template-ale
     AlefLiItemComponent,
     AlefNavMenuSectionComponent,
     CodeTemplateAlefComponent,
+    AlefTextControllerComponent,
+    AlefAddDocumentationComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,9 @@ import { CodeTemplateAlefComponent } from './shared/components/code-template-ale
     ButtonsModule,
     FormsModule,
     HighlightModule,
-    TabsModule
+    TabsModule,
+    HttpClientModule, 
+    AngularEditorModule
   ],
   providers: [
     {
