@@ -1,13 +1,13 @@
-<li [ngClass]="{'selected-nav-bar': !showList}" (click)="showItem()">
+<li [ngClass]="{'selected-nav-bar': showList}" (click)="showItem()">
   <div>
     <i class="{{ iconMain }}" [ngStyle]="{'font-size': fontSize  }"></i>
     <span class="link_name selected noselect">{{ title }}</span>
-    <i class="bx bxs-chevron-down arrow" [ngClass]="{activate: !showList}"></i>
+    <i class="bx bxs-chevron-down arrow" [ngClass]="{activate: showList}"></i>
   </div>
 </li>
 
 <ng-container *ngFor="let item of subItems" >
-  <li [hidden]="showList">
+  <li [hidden]="!showList">
     <div class="sub-item">
       <i class="{{ item.icon }}"></i>
       <span class="link_name selected noselect">{{ item.nome }}</span>

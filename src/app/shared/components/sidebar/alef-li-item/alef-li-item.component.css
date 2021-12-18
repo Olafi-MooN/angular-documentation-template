@@ -7,10 +7,10 @@ li {
   height: max(8vh, 40px);
 }
 
-li:hover{
+li:hover:not(.selected-nav-bar){
   background-color:var(--color-red-transparent-hover);
   border-radius: 8px;
-  transition: background-color ease-in-out 800ms;
+  transition: background-color ease-in-out 200ms;
 }
 
 li > * > * {
