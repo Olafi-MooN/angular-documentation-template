@@ -6,6 +6,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: fixed;
+  z-index: 100;
 }
 
 .container-nav-header-menu .bx.bx-menu {

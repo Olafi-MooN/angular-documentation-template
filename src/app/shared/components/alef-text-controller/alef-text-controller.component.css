@@ -1,7 +1,6 @@
 .container-add { 
   width: calc(100% + 60px); ;
-  margin-top: max(20px, 5vh);
-  margin-left: -30px;
+  margin: max(80px, 5vh)  0 80px -30px;
   height: 2px;
   background-color: var(--color-red);
 

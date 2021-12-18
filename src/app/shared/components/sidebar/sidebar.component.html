@@ -33,8 +33,10 @@
       <!-- <i class="bx bx-log-out"></i> -->
     </div>
   </div>
-  <section class="home-section">
+  <section class="home-section" [ngClass]="{'widescreen': !showMenu}">
     <app-alef-nav-menu-section (activeMenu)="activeMenu($event)"> </app-alef-nav-menu-section>
-    <ng-content></ng-content>
+    <div class="myContent">
+      <ng-content></ng-content>
+    </div>
   </section>
 </div>

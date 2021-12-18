@@ -19,10 +19,11 @@
   transition: width ease-in-out 800ms;
   animation-duration: 800ms;
   animation-fill-mode: forwards;
+  position: fixed;
+  z-index: 100;
 }
 
 .sidebar.close {
-
   animation-fill-mode: both;
   animation-name: easeOut;
   animation-duration: 100ms;
@@ -108,8 +109,19 @@
 
 .home-section {
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: max(300px, 24vw);
+  transition: all ease-in-out 500ms;
+}
+
+.home-section.widescreen {
+  margin-left: 0px;
+} 
+
+.myContent {
+  margin: max(50px, 3.5vw) auto 0px;
+  max-width: 1200px;
 }
 
 @keyframes easeIn {
@@ -138,3 +150,4 @@
     max-width: max(0px, 0vw);
   }
 }
+

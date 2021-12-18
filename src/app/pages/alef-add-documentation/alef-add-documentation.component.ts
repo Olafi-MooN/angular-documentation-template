@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 
 @Component({
   selector: 'app-alef-add-documentation',
@@ -7,6 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlefAddDocumentationComponent implements OnInit {
   public listTextCode: Array<'text' | 'code'> = ['text', 'code', 'text']
+
+  editorConfig: AngularEditorConfig = {
+    editable: true,
+    spellcheck: true,
+    minHeight: '100px',
+    // showToolbar: false,
+    defaultFontSize: '3', 
+    fonts: [
+      { class: 'Montserrat', name: 'Montserrat' },
+    ],
+  }
 
   code = `function myFunction() {
   document.getElementById("demo1").innerHTML = "Test 1!";
