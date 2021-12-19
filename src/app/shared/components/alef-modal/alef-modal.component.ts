@@ -1,10 +1,10 @@
 import { AfterViewChecked, AfterViewInit, Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
-import { AlefNavMenuSectionComponent } from '../sidebar/alef-nav-menu-section/alef-nav-menu-section.component';
+import { AlefNavMenuSectionComponent } from '../alef-sidebar/alef-nav-menu-section/alef-nav-menu-section.component';
 
 @Component({
-  selector: 'app-modal-add-code',
-  templateUrl: './modal-add-code.component.html',
-  styleUrls: ['./modal-add-code.component.css']
+  selector: 'app-alef-modal',
+  templateUrl: './alef-modal.component.html',
+  styleUrls: ['./alef-modal.component.css']
 })
 export class ModalAddCodeComponent implements OnInit, AfterViewChecked {
 

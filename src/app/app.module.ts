@@ -10,15 +10,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TemplateFormComponent } from './pages/template-form/template-form.component';
 import { DataFormComponent } from './pages/data-form/data-form.component';
-import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
-import { AlefLiItemComponent } from './shared/components/sidebar/alef-li-item/alef-li-item.component';
-import { AlefNavMenuSectionComponent } from './shared/components/sidebar/alef-nav-menu-section/alef-nav-menu-section.component';
-import { CodeTemplateAlefComponent } from './shared/components/code-template-alef/code-template-alef.component';
+import { SidebarComponent } from './shared/components/alef-sidebar/alef-sidebar.component';
+import { AlefLiItemComponent } from './shared/components/alef-sidebar/alef-li-item/alef-li-item.component';
+import { AlefNavMenuSectionComponent } from './shared/components/alef-sidebar/alef-nav-menu-section/alef-nav-menu-section.component';
+import { CodeTemplateAlefComponent } from './shared/components/alef-template-code/alef-template-code.component';
 import { AlefTextControllerComponent } from './shared/components/alef-text-controller/alef-text-controller.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { AlefAddDocumentationComponent } from './pages/alef-add-documentation/alef-add-documentation.component';
-import { ModalAddCodeComponent } from './shared/components/modal-add-code/modal-add-code.component';
+import { ModalAddCodeComponent } from './shared/components/alef-modal/alef-modal.component';
 
 @NgModule({
   declarations: [

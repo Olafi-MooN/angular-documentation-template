@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-code-template-alef',
-  templateUrl: './code-template-alef.component.html',
-  styleUrls: ['./code-template-alef.component.css']
+  selector: 'app-alef-template-code',
+  templateUrl: './alef-template-code.component.html',
+  styleUrls: ['./alef-template-code.component.css']
 })
 export class CodeTemplateAlefComponent implements OnInit {
   @Input() code: string = ``;

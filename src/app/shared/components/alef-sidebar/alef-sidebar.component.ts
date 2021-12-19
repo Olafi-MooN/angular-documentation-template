@@ -6,9 +6,9 @@ export interface ISideBarOptionsModel {
   responsive: boolean;
 }
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  selector: 'app-alef-sidebar',
+  templateUrl: './alef-sidebar.component.html',
+  styleUrls: ['./alef-sidebar.component.css']
 })
 
 export class SidebarComponent implements OnInit {
