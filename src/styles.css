@@ -3,13 +3,13 @@
   --color-red-transparent: #cb3c2386;
   --color-red-transparent-hover: #cb3c2342;
   --color-green: #49FF04;
+  --color-green-dark: #257907;
   --color-white: #EDECEC;
   --color-gray: #edececa1;
   --color-gray-transparent: #edecec33;
   --color-blue-dark: #1A1D2A;
-
   --responsive-title-h1: max(15px, 1.2vw);
-  --responsive-span-menu: max(15px,0.8vw)
+  --responsive-span-menu: max(15px,0.8vw);
 }
 
 * {

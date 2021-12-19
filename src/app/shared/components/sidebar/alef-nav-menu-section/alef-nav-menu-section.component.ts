@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class AlefNavMenuSectionComponent implements OnInit {
 
   public active: boolean = true;
+  public static globalMenuIsActive : boolean = true;
   @Output() public activeMenu: EventEmitter<boolean> = new EventEmitter<boolean>(); 
   
 
@@ -18,6 +19,7 @@ export class AlefNavMenuSectionComponent implements OnInit {
 
   public setActiveMenu() {
     this.active = !this.active;
+    AlefNavMenuSectionComponent.globalMenuIsActive = this.active;
     this.activeMenu.emit(this.active);
   }
 }
