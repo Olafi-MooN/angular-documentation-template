@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms'; 
 
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
@@ -41,7 +42,8 @@ import { ModalAddCodeComponent } from './shared/components/alef-modal/alef-modal
     HighlightModule,
     TabsModule,
     HttpClientModule, 
-    AngularEditorModule
+    AngularEditorModule, 
+    ReactiveFormsModule
   ],
   providers: [
     {

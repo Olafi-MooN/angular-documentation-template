@@ -1,4 +1,5 @@
-import { AfterViewChecked, AfterViewInit, Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { AfterViewChecked, Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { OpenModalService } from 'src/app/services/open-modal.service';
 import { AlefNavMenuSectionComponent } from '../alef-sidebar/alef-nav-menu-section/alef-nav-menu-section.component';
 
 @Component({
@@ -10,17 +11,27 @@ export class ModalAddCodeComponent implements OnInit, AfterViewChecked {
 
   @Input() public title: string = "Title of modal";
   @Input() public salvar: string = "Salvar";
-  @Output() public close: EventEmitter<any> = new EventEmitter<any>();
+  @Input() public hiddenModalInput: boolean = false;
+  @Output() public salveEmitter: EventEmitter<any> = new EventEmitter<any>();
+  @Output() public closeEmitter: EventEmitter<boolean> = new EventEmitter<boolean>();
+
 
   public widescreen: boolean = true;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }
 
-  closeModal() { 
-    this.close.next();
+  salveModal(): void { 
+    this.salveEmitter.next();
+  }
+
+  closeModal(): void { 
+    this.hiddenModalInput = !this.hiddenModalInput;
+    this.closeEmitter.next(this.hiddenModalInput);
   }
 
   ngAfterViewChecked() { 

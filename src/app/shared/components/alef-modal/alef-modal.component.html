@@ -1,14 +1,16 @@
-<div class="container-modal-code" [ngClass]="{fullscreen: widescreen === false}">
-  <div class="modal-code" [ngClass]="{fullscreen: widescreen === false}"> 
-   <div class="modal-container-header">
-     <h3 class="title"> {{ title }} </h3>
-     <img class="close" src="assets/close.png" alt="" (click)="closeModal()">
-   </div>
-   <div class="modal-container-content">
-    <ng-content select="selector"></ng-content>
-   </div>
-   <div class="modal-container-footer">
-    <button>{{ salvar }}</button>
-   </div>
+<div  [hidden]="hiddenModalInput === true">
+  <div class="container-modal-code" [ngClass]="{fullscreen: widescreen === false}">
+    <div class="modal-code" [ngClass]="{fullscreen: widescreen === false}"> 
+     <div class="modal-container-header">
+       <h3 class="title"> {{ title }} </h3>
+       <img class="close" src="assets/close.png" alt="" (click)="closeModal()">
+     </div>
+     <div class="modal-container-content">
+      <ng-content></ng-content>
+     </div>
+     <div class="modal-container-footer">
+      <button (click)="salveModal()">{{ salvar }}</button>
+     </div>
+    </div>
   </div>
 </div>

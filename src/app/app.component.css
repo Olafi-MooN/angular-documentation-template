@@ -1,3 +1,10 @@
 .container-alef {
+  width: 100%;
   padding: 0px 30px;
+}
+
+@media (max-width: 1200px) {
+  .container-alef {
+    padding: 0px 100px;
+  }
 }

@@ -1,0 +1,14 @@
+.editor-angular {
+  min-width: 100%;
+}
+
+.container-content {
+  margin-top: 40px;
+}
+
+@media (min-width: 800px)
+{
+  .editor-angular {
+    padding: 0 10%;
+  }
+}

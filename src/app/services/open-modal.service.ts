@@ -6,15 +6,15 @@ import { Subject } from 'rxjs';
 })
 export class OpenModalService {
   
-  public dados: Subject<boolean> = new Subject<boolean>();
+  public openModal: Subject<boolean> = new Subject<boolean>();
 
   constructor() { }
   
-  public setDados(dados: boolean) {
-    this.dados.next(dados);
+  public setOpenModal(OpenModal: boolean) {
+    this.openModal.next(OpenModal);
   }
   
-  public getDados() {
-    this.dados.asObservable()
+  public getOpenModal() {
+    this.openModal.asObservable()
   }
 }

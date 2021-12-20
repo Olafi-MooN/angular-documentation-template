@@ -1,17 +1,18 @@
 .container-modal-code {
-  background-color: var(--color-gray);
-  height: 91.5vh;
-  width: 76%;
-  z-index: 200;
-  position: fixed;
-  top: 0;
-  margin-left: max(300px, 24vw);
-  margin-top: max(50px, 3.5vw);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  transition: all ease-in-out 300ms;
+   background-color: var(--color-gray);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   z-index: 400;
+}
+
+.container-modal-code.hidden {
+  display: none;
 }
 
 .container-modal-code.fullscreen {
@@ -45,9 +46,33 @@
 
 .modal-container-content {
   height: 70%;
-  width: 100%;
+  margin: 0 auto;
+  width: 93%;
+  overflow-y: auto;
 }
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-red);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-red-transparent);
+}
 .close {
   width: max(23px, 1vw);
   height: max(23px, 1vw);
@@ -81,9 +106,12 @@
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
-  font-family: 'Montserrat';
-  font-weight: bold
-  ;
+  font-weight: bold;
+  transition: all ease-in-out 400ms;
+}
+
+.modal-container-footer button:hover {
+  filter: brightness(1.40);
 }
 
 @media (min-width: 1200px)

@@ -1,6 +1,34 @@
-<div *ngFor="let item of listTextCode">
-  <angular-editor *ngIf="item === 'text'" [config]="editorConfig"></angular-editor>
-  <app-alef-template-code *ngIf="item === 'code'" [code]="code"></app-alef-template-code>
+<!-- <div *ngFor="let item of listTextCode">
+  <angular-editor
+    *ngIf="item === 'text'"
+    [config]="editorConfig"
+  ></angular-editor>
+  <app-alef-template-code
+    *ngIf="item === 'code'"
+    [code]="code"
+  ></app-alef-template-code>
+</div> -->
+
+<div *ngFor="let item of listTextCode" class="container-content">
+  <div class="editor-angular" [innerHTML]="item"></div>
 </div>
 
-<app-alef-text-controller (addText)="addNewText($event)" (addCode)="addNewCode($event)"></app-alef-text-controller>
+<app-alef-text-controller
+  (addText)="openModalText()"
+  (addCode)="openModalCode()"
+></app-alef-text-controller>
+
+<!-- (ngSubmit)="onSubmit()" -->
+<form [formGroup]="model">
+  <app-alef-modal
+    [hiddenModalInput]="hiddenText"
+    (salveEmitter)="actionAddText()"
+    (closeEmitter)="changeClose($event)"
+  >
+    <angular-editor [config]="editorConfig" name="editor"formControlName="editor"></angular-editor>
+  </app-alef-modal>
+</form>
+
+<!-- <app-alef-modal [hidden]="openCode" (salveEmitter)="actionAddCode()">
+  
+</app-alef-modal> -->

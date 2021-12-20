@@ -3,7 +3,7 @@
   margin: max(80px, 5vh)  0 80px -30px;
   height: 2px;
   background-color: var(--color-red);
-
+  min-width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
