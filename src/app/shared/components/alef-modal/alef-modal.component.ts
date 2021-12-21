@@ -1,5 +1,4 @@
 import { AfterViewChecked, Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
-import { OpenModalService } from 'src/app/services/open-modal.service';
 import { AlefNavMenuSectionComponent } from '../alef-sidebar/alef-nav-menu-section/alef-nav-menu-section.component';
 
 @Component({

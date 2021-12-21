@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { AlefAddDocumentationComponent } from './pages/alef-add-documentation/alef-add-documentation.component';
 import { ModalAddCodeComponent } from './shared/components/alef-modal/alef-modal.component';
+import { AlefFormHighlightComponent } from './shared/components/alef-form-highlight/alef-form-highlight.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ModalAddCodeComponent } from './shared/components/alef-modal/alef-modal
     AlefTextControllerComponent,
     AlefAddDocumentationComponent,
     ModalAddCodeComponent,
+    AlefFormHighlightComponent,
   ],
   imports: [
     BrowserModule,

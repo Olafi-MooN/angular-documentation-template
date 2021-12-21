@@ -1,13 +1,32 @@
-<!-- <div *ngFor="let item of listTextCode">
-  <angular-editor
-    *ngIf="item === 'text'"
-    [config]="editorConfig"
-  ></angular-editor>
-  <app-alef-template-code
-    *ngIf="item === 'code'"
-    [code]="code"
-  ></app-alef-template-code>
-</div> -->
+<form [formGroup]="model">
+  <app-alef-modal
+    [hiddenModalInput]="hiddenCode"
+    (closeEmitter)="changeClose($event)"
+  >
+    <div class="content-add-documentation">
+      <div class="inputs">
+        <div class="content-input">
+          <strong>Nome do arquivo</strong>
+          <input type="text" placeholder="index.html"/>
+        </div>
+        <div class="content-input">
+          <strong>Linguagem utilizada</strong>
+          <select name="" id="">
+            <option disabled value="" selected>Selecione uma linguagem</option>
+            <option *ngFor="let item of extensionFiles" [value]="item">
+              {{ item }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="content-code">
+        <strong>Codigo</strong>
+        <textarea name="code-textarea" id="code-textarea" placeholder="Cole aqui o codigo"></textarea>
+      </div>
+      <button class="add-code">Adicionar</button>
+    </div>
+  </app-alef-modal>
+</form>
 
 <div *ngFor="let item of listTextCode" class="container-content">
   <div class="editor-angular" [innerHTML]="item"></div>
@@ -25,10 +44,12 @@
     (salveEmitter)="actionAddText()"
     (closeEmitter)="changeClose($event)"
   >
-    <angular-editor [config]="editorConfig" name="editor"formControlName="editor"></angular-editor>
+    <div class="content-add-documentation">
+      <angular-editor
+        [config]="editorConfig"
+        name="editor"
+        formControlName="editor"
+      ></angular-editor>
+    </div>
   </app-alef-modal>
 </form>
-
-<!-- <app-alef-modal [hidden]="openCode" (salveEmitter)="actionAddCode()">
-  
-</app-alef-modal> -->
