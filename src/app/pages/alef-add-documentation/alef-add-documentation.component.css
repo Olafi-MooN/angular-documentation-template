@@ -23,7 +23,7 @@
   width: 48%;
 }
 
-.inputs .content-input select, 
+.inputs .content-input select,
 .inputs .content-input input {
   min-height: 32px;
   border: none;
@@ -31,7 +31,7 @@
   padding: 0 12px;
 }
 
- .content-code {
+.content-code {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -58,9 +58,34 @@ strong {
   border-radius: 4px;
 }
 
-@media (min-width: 800px)
-{
+@media (min-width: 800px) {
   .editor-angular {
     padding: 0 10%;
   }
+}
+
+::ng-deep .angular-editor-toolbar button {
+  background: rgb(74, 78, 78) !important;
+  background: radial-gradient(
+    circle,
+    rgba(74, 78, 78, 1) 78%,
+    rgba(30, 30, 31, 1) 100%
+  ) !important;
+  border: 0.5px solid #888686 !important;
+}
+
+::ng-deep .angular-editor-toolbar {
+  background-color: #333 !important;
+  border: 0.8px solid #888686 !important;
+  color: white;
+}
+
+::ng-deep .angular-editor-textarea {
+  background-color: #333 !important;
+  border: 0.8px solid #888686 !important;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  min-height: 198px !important;
+  outline: none;
+  color: white;
 }

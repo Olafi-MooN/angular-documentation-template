@@ -1,14 +1,14 @@
 .container-modal-code {
-   background-color: var(--color-gray);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100vh;
-   z-index: 400;
+  background-color: var(--color-blue-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 400;
 }
 
 .container-modal-code.hidden {
@@ -30,18 +30,26 @@
   margin-left: 0px;
   flex-direction: column;
   transition: all ease-in-out 300ms;
+  background-color: #333;
+  border-start-end-radius: 15px;
+  border-end-start-radius: 15px;
+   border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .modal-container-header {
   height: 15%;
   width: 100%;
   background-color: var(--color-blue-dark);
-  box-shadow: 4px 6px 10px hsl(0deg 0% 58% / 0.5);
+  /* box-shadow: 4px 6px 10px hsl(0deg 0% 58% / 0.5); */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  color: var(--color-white)
+  color: var(--color-white);
+
+  border-start-end-radius: 15px;
+  border-end-start-radius: 15px;
 }
 
 .modal-container-content {
@@ -49,8 +57,15 @@
   margin: 0 auto;
   width: 100%;
   overflow-y: auto;
-}
 
+  background-color: #333;
+  border: 0.5px solid #444444;
+  color: #444;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -81,8 +96,8 @@
 
 .title {
   font-size: max(20px, 1.2vw);
-  font-family: 'Montserrat';
-  font-weight: bold;  
+  font-family: "Montserrat";
+  font-weight: bold;
   letter-spacing: 1.3px;
 }
 
@@ -90,13 +105,17 @@
   height: 15%;
   width: 100%;
   background-color: var(--color-blue-dark);
-  box-shadow: 4px 6px 10px hsl(0deg 0% 58% / 0.5);
+  /* box-shadow: 4px 6px 10px hsl(0deg 0% 58% / 0.5); */
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  background-color: #333;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: var(--color-blue-dark);
 }
 
-.modal-container-footer button{
+.modal-container-footer button {
   margin-right: 20px;
   width: max(150px, 8vw);
   height: max(33px, 4vh);
@@ -111,10 +130,8 @@
 }
 
 .modal-container-footer button:hover {
-  filter: brightness(1.40);
+  filter: brightness(1.4);
 }
 
-@media (min-width: 1200px)
-{
-
+@media (min-width: 1200px) {
 }

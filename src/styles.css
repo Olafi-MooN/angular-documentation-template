@@ -7,9 +7,11 @@
   --color-white: #EDECEC;
   --color-gray: #edececa1;
   --color-gray-transparent: #edecec33;
-  --color-blue-dark: #1A1D2A;
+  --color-blue-dark: #0d1117;
   --responsive-title-h1: max(15px, 1.2vw);
   --responsive-span-menu: max(15px,0.8vw);
+
+  --color-blue-gray: #393f5cb0;
 }
 
 * {
