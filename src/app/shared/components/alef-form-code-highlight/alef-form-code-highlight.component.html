@@ -1,0 +1,28 @@
+<form [formGroup]="model" (ngSubmit)="onSubmitAdd()">
+  <div class="content-add-documentation-form">
+    <div class="inputs">
+      <div class="content-input">
+        <strong>Nome do arquivo</strong>
+        <input type="text" name="nameFile" formControlName="nameFile" placeholder="index.html"/>
+      </div>
+      <div class="content-input">
+        <strong>Linguagem utilizada</strong>
+        <select name="typeFile" formControlName="typeFile"  id="typeFile">
+          <option disabled value="" selected>Selecione uma linguagem</option>
+          <option *ngFor="let item of extensionFiles" [value]="item">
+            {{ item }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="content-code">
+      <strong>Codigo</strong>
+      <textarea name="code" formControlName="code" placeholder="Cole aqui o codigo"></textarea>
+    </div>
+    <button class="add-code" type="submit">Adicionar</button>
+    <div class="content-code-view">
+      <strong class="content-code-view strong">Visualizar formatação</strong>
+      <app-alef-template-code [listCodeFiles]="listCodeFiles" *ngIf="listCodeFiles.length > 0" (codeFileEmitter)="editCode($event)"></app-alef-template-code>
+    </div>
+  </div>
+</form>

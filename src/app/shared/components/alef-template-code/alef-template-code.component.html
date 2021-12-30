@@ -1,8 +1,9 @@
-<div *ngIf="codeDefaultConfig.useTabs">
+<div *ngIf="!code && codeDefaultConfig.useTabs">
   <tabset>
-    <tab *ngFor="let item of listCodeFiles" [heading]="item.nameFile" id="tab1">
+    <tab *ngFor="let item of listCodeFiles; let i = index" [heading]="item.nameFile" id="tab1">
       <pre
-        *ngIf="code"
+        *ngIf="!code"
+        (click)="sendCodeFile(item, i)"
       ><code [highlight]="item.code" [languages]="[item.typeFile]"  [lineNumbers]="codeDefaultConfig.lineNumbers"></code></pre>
     </tab>
   </tabset>

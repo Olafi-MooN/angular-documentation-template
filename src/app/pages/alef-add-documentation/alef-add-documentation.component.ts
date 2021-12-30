@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { languages } from './languages';
 
 @Component({
   selector: 'app-alef-add-documentation',
@@ -9,10 +8,9 @@ import { languages } from './languages';
   styleUrls: ['./alef-add-documentation.component.css']
 })
 export class AlefAddDocumentationComponent implements OnInit {
-  public listTextCode: Array<string> = [] as Array<string>;
+  public listTextCode: any = [] as any[];
   public hiddenCode: boolean = true;
   public hiddenText: boolean = true;
-  public extensionFiles: string[] = languages;
 
   editorConfig: AngularEditorConfig = {
     editable: true,
@@ -61,7 +59,11 @@ export class AlefAddDocumentationComponent implements OnInit {
     this.hiddenCode = close;
   }
 
-  actionAddCode() {
-    this.openModalCode();
+  actionAddCode(e?: any) {
+    this.listTextCode.push(e);
+    if(!e){
+      this.hiddenCode = true;
+    }
   }
+
 }

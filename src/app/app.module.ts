@@ -21,6 +21,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { AlefAddDocumentationComponent } from './pages/alef-add-documentation/alef-add-documentation.component';
 import { ModalAddCodeComponent } from './shared/components/alef-modal/alef-modal.component';
 import { AlefFormHighlightComponent } from './shared/components/alef-form-highlight/alef-form-highlight.component';
+import { AlefFormCodeHighlightComponent } from './shared/components/alef-form-code-highlight/alef-form-code-highlight.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { AlefFormHighlightComponent } from './shared/components/alef-form-highli
     AlefAddDocumentationComponent,
     ModalAddCodeComponent,
     AlefFormHighlightComponent,
+    AlefFormCodeHighlightComponent,
   ],
   imports: [
     BrowserModule,
